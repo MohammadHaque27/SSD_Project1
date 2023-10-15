@@ -34,7 +34,24 @@ namespace SSD_Project1
         }
         public Candlestick(String rowOfData)
         {
+            char[] separators = new char[] { ',', ' ', '"', '-' };
+            string[] subs = rowOfData.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 
+            Dictionary<string, int> map = new Dictionary<string, int>();
+            int i = 1;
+            map.Add("Jan", i++);
+            map.Add("Feb", i++);
+            map.Add("Mar", i++);
+            map.Add("Apr", i++);    
+            map.Add("May", i++);
+            map.Add("Jun", i++);
+            map.Add("Jul", i++);
+            map.Add("Aug", i++);
+            map.Add("Sep", i++);
+            map.Add("Oct", i++);
+            map.Add("Nov", i++);
+            map.Add("Dec", i++);
+            map = new Dictionary<string, int>();  
         }
     }
 }
